@@ -15,12 +15,10 @@ public class Snake : MonoBehaviour
         _tail.Init(_head, _speed, detailCount);
     }
 
-    public void Destroy()
-    {
-        _tail.Destroy();
-        Destroy(gameObject);
-    }
-    
+    public void LookAt(Vector3 cursorPosition) => _targetDirection = cursorPosition - _head.position;
+
+    public void GetMoveInfo(out Vector3 position) => position = transform.position;
+
     private void Update()
     {
         Rotate();
@@ -35,5 +33,10 @@ public class Snake : MonoBehaviour
 
     private void Move() => transform.position += _head.forward * (Time.deltaTime * _speed);
 
-    public void LookAt(Vector3 cursorPosition) => _targetDirection = cursorPosition - _head.position;
+
+    public void Destroy()
+    {
+        _tail.Destroy();
+        Destroy(gameObject);
+    }
 }
