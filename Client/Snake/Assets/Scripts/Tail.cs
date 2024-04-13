@@ -24,7 +24,7 @@ public class Tail : MonoBehaviour
 
     private void SetDetailCount(int detailCount)
     {
-        if (detailCount == _details.Count + 1) return;
+        if (detailCount == _details.Count - 1) return;
 
         int diff = (_details.Count - 1) - detailCount;
 
