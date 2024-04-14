@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
                     _snake.SetDetailCount((byte)changes[i].Value);
                     break;
                 default:
-                    Debug.LogWarning("Non handled filed change " + changes[i].Field);
+                    Debug.LogWarning("Non handled field change " + changes[i].Field);
                     break;
             }
         }

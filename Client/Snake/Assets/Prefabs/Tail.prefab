@@ -49,6 +49,7 @@ MonoBehaviour:
   _detailPrefab: {fileID: 561800842607570890, guid: 9217f628f195bbb4ba16b35ecf42e985,
     type: 3}
   _detailDistance: 1
+  _mesh: {fileID: 4914548234562227439}
 --- !u!65 &7866853789084609125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124,6 +125,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4558906730386509825, guid: 6f36cd16b6c365f4cad37fb84deec7ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1edea4fba93816a4ea16ff7b3038d295, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f36cd16b6c365f4cad37fb84deec7ec,
         type: 3}
       propertyPath: m_Name
@@ -134,6 +140,12 @@ PrefabInstance:
 --- !u!4 &216947466925966587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6f36cd16b6c365f4cad37fb84deec7ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 326645040987661072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4914548234562227439 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4558906730386509825, guid: 6f36cd16b6c365f4cad37fb84deec7ec,
     type: 3}
   m_PrefabInstance: {fileID: 326645040987661072}
   m_PrefabAsset: {fileID: 0}

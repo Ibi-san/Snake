@@ -5,17 +5,16 @@ public class Tail : MonoBehaviour
 {
     [SerializeField] private Transform _detailPrefab;
     [SerializeField] private float _detailDistance = 1f;
+    [SerializeField] private MeshRenderer _mesh;
     private Transform _head;
-    private float _snakeSpeed;
     private List<Transform> _details = new();
     private List<Vector3> _positionHistory = new();
     private List<Quaternion> _rotationHistory = new();
+    private float _hue;
 
     public void Init(Transform head, float speed, int detailCount)
     {
         _head = head;
-        _snakeSpeed = speed;
-        
         _details.Add(transform);
         _positionHistory.Add(_head.position);
         _rotationHistory.Add(_head.rotation);
@@ -43,11 +42,20 @@ public class Tail : MonoBehaviour
         }
     }
 
+    public void SetColor(float hue)
+    {
+        _hue = hue;
+        Color.RGBToHSV(_mesh.material.color, out float h,out float s, out float v);
+        Color newColor = Color.HSVToRGB(hue, s, v);
+        _mesh.material.color = newColor;
+    }
+
     private void AddDetail()
     {
         Vector3 position = _details[_details.Count - 1].position;
         Quaternion rotation = _details[_details.Count - 1].rotation;
         Transform detail = Instantiate(_detailPrefab, position, rotation);
+        detail.GetComponent<Detail>().SetColor(_hue);
         _details.Insert(0, detail);
         _positionHistory.Add(position);
         _rotationHistory.Add(rotation);
