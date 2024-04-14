@@ -6,6 +6,7 @@ export class Player extends Schema {
     @type("number") x = Math.floor(Math.random() * 256) - 128;
     @type("number") z = Math.floor(Math.random() * 256) - 128;
     @type("uint8") d = 2;
+    @type("number") h = Math.floor(Math.random()* 360);
 }
 
 export class State extends Schema {
