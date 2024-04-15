@@ -1363,6 +1363,8 @@ MonoBehaviour:
     type: 3}
   _snakePrefab: {fileID: 2843266355612042472, guid: 0c5b6d67789a09b4b89fa56082aa6f06,
     type: 3}
+  _applePrefab: {fileID: 8703444098885622842, guid: e1dabf41eabb1e7478adc737f8b1bdac,
+    type: 3}
 --- !u!4 &185408496
 Transform:
   m_ObjectHideFlags: 0

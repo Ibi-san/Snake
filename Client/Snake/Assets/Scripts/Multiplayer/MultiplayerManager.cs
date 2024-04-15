@@ -42,6 +42,9 @@ public class MultiplayerManager : ColyseusManager<MultiplayerManager>
 
         _room.State.players.OnAdd += CreateEnemy;
         _room.State.players.OnRemove += RemoveEnemy;
+        _room.State.apples.ForEach(CreateApple);
+        _room.State.apples.OnAdd += (key, apple) => CreateApple(apple);
+        _room.State.apples.OnRemove += RemoveApple;
     }
 
     protected override void OnApplicationQuit()
@@ -97,6 +100,30 @@ public class MultiplayerManager : ColyseusManager<MultiplayerManager>
         EnemyController enemy = _enemies[key];
         _enemies.Remove(key);
         enemy.Destroy();
+    }
+
+    #endregion
+
+    #region Apple
+
+    [SerializeField] private Apple _applePrefab;
+    private Dictionary<Vector2Float, Apple> _apples = new();
+    
+    private void CreateApple(Vector2Float vector2Float)
+    {
+        Vector3 position = new Vector3(vector2Float.x, 0, vector2Float.z);
+        Apple apple = Instantiate(_applePrefab, position, Quaternion.identity);
+        apple.Init(vector2Float);
+        _apples.Add(vector2Float, apple);
+    }
+
+    private void RemoveApple(int key, Vector2Float vector2Float)
+    {
+        if (_apples.ContainsKey(vector2Float) == false) return;
+
+        Apple apple = _apples[vector2Float];
+        _apples.Remove(vector2Float);
+        apple.Destroy();
     }
 
     #endregion
