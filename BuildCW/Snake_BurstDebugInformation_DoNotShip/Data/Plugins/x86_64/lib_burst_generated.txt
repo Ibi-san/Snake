@@ -139,6 +139,7 @@ Library: lib_burst_generated
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
+--root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\LucidSight.Runtime.ColyseusSDK.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Core.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
@@ -151,17 +152,16 @@ Library: lib_burst_generated
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
+--root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
---root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
---root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\LucidSight.Runtime.ColyseusSDK.dll
 --assembly-folder=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
@@ -317,6 +317,7 @@ Library: lib_burst_generated
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
+--root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\LucidSight.Runtime.ColyseusSDK.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Core.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
@@ -329,17 +330,16 @@ Library: lib_burst_generated
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
+--root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
---root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
 --root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
---root-assembly=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\LucidSight.Runtime.ColyseusSDK.dll
 --assembly-folder=E:\UnityProjects\Snake\Client\Snake\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
