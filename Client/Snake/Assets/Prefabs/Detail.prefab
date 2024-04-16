@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942090bcd08dc9d459f9e6e1ff336198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathParticle: {fileID: 919132149155446097, guid: cca50db2e8180864cac519e2943ac757,
+  _deathParticle: {fileID: 6337447475170569117, guid: f18bc8e86746677419b9e0340a6aa844,
     type: 3}
 --- !u!1001 &4263617601509947479
 PrefabInstance:
