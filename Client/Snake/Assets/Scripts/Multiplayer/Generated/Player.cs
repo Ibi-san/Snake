@@ -19,5 +19,8 @@ public partial class Player : Schema {
 
 	[Type(3, "number")]
 	public float h = default(float);
+
+	[Type(4, "uint16")]
+	public ushort score = default(ushort);
 }
 

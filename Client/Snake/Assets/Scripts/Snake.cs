@@ -6,7 +6,7 @@ public class Snake : MonoBehaviour
     public float Speed => _speed;
 
     [SerializeField] private Tail _tailPrefab;
-    [SerializeField] private Transform _head;
+    [field: SerializeField] public Transform Head { get; private set; }
     [SerializeField] private float _speed = 2f;
     [SerializeField] private List<MeshRenderer> _meshes;
     private Tail _tail;
@@ -16,12 +16,12 @@ public class Snake : MonoBehaviour
         SetColor(hue);
         _tail = Instantiate(_tailPrefab, transform.position, Quaternion.identity);
         _tail.SetColor(hue);
-        _tail.Init(_head, _speed, detailCount);
+        _tail.Init(Head, _speed, detailCount);
     }
 
     public void SetDetailCount(int detailCount) => _tail.SetDetailCount(detailCount);
 
-    public void SetRotation(Vector3 pointToLook) => _head.LookAt(pointToLook);
+    public void SetRotation(Vector3 pointToLook) => Head.LookAt(pointToLook);
 
     private void SetColor(float hue)
     {
@@ -35,7 +35,7 @@ public class Snake : MonoBehaviour
 
     private void Update() => Move();
 
-    private void Move() => transform.position += _head.forward * (Time.deltaTime * _speed);
+    private void Move() => transform.position += Head.forward * (Time.deltaTime * _speed);
 
     public void Destroy()
     {
