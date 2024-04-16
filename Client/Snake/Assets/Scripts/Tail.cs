@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +12,16 @@ public class Tail : MonoBehaviour
     private List<Vector3> _positionHistory = new();
     private List<Quaternion> _rotationHistory = new();
     private float _hue;
+    private int _playerLayer;
+    private bool _isPlayer;
 
-    public void Init(Transform head, float speed, int detailCount)
+    public void Init(Transform head, float speed, int detailCount, int playerLayer, bool isPlayer)
     {
+        _playerLayer = playerLayer;
+        _isPlayer = isPlayer;
+        
+        if (isPlayer) SetPlayerLayer(gameObject);
+
         _head = head;
         _details.Add(transform);
         _positionHistory.Add(_head.position);
@@ -22,6 +30,17 @@ public class Tail : MonoBehaviour
         _rotationHistory.Add(transform.rotation);
         
         SetDetailCount(detailCount);
+    }
+
+    private void SetPlayerLayer(GameObject gameObject)
+    {
+        gameObject.layer = _playerLayer;
+        var childrens = GetComponentsInChildren<Transform>();
+
+        foreach (var child in childrens)
+        {
+            child.gameObject.layer = _playerLayer;
+        }
     }
 
     public void SetDetailCount(int detailCount)
@@ -55,6 +74,7 @@ public class Tail : MonoBehaviour
         Vector3 position = _details[_details.Count - 1].position;
         Quaternion rotation = _details[_details.Count - 1].rotation;
         Transform detail = Instantiate(_detailPrefab, position, rotation);
+        if(_isPlayer) SetPlayerLayer(detail.gameObject);
         detail.GetComponent<Detail>().SetColor(_hue);
         _details.Insert(0, detail);
         _positionHistory.Add(position);
@@ -101,6 +121,26 @@ public class Tail : MonoBehaviour
         }
     }
 
+    public DetailPositions GetDetailsPositions()
+    {
+        int detailsCount = _details.Count;
+        DetailPosition[] ds = new DetailPosition[detailsCount];
+        for (int i = 0; i < detailsCount; i++)
+        {
+            ds[i] = new DetailPosition()
+            {
+                x = _details[i].position.x,
+                z = _details[i].position.z,
+            };
+        }
+
+        DetailPositions detailPositions = new DetailPositions()
+        {
+            ds = ds
+        };
+        return detailPositions;
+    }
+
     public void Destroy()
     {
         for (int i = 0; i < _details.Count; i++)
@@ -108,4 +148,18 @@ public class Tail : MonoBehaviour
             Destroy(_details[i].gameObject);
         }
     }
+}
+
+[Serializable]
+public struct DetailPosition
+{
+    public float x;
+    public float z;
+}
+
+[Serializable]
+public struct DetailPositions
+{
+    public string id;
+    public DetailPosition[] ds;
 }

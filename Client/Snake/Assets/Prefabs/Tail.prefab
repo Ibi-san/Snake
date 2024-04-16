@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5960575293804307373}
   - component: {fileID: 5960575293804307370}
   - component: {fileID: 7866853789084609125}
+  - component: {fileID: 4351026885379718266}
   m_Layer: 0
   m_Name: Tail
   m_TagString: Untagged
@@ -63,6 +64,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &4351026885379718266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5960575293804307371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942090bcd08dc9d459f9e6e1ff336198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathParticle: {fileID: 6337447475170569117, guid: f18bc8e86746677419b9e0340a6aa844,
+    type: 3}
 --- !u!1001 &326645040987661072
 PrefabInstance:
   m_ObjectHideFlags: 0
