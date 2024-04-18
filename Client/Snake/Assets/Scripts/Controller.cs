@@ -58,6 +58,9 @@ public class Controller : MonoBehaviour
                 case "d":
                     _snake.SetDetailCount((byte)changes[i].Value);
                     break;
+                case "score":
+                    _multiplayerManager.UpdateScore(_clientID, (ushort)changes[i].Value);
+                    break;
                 default:
                     Debug.LogWarning("Non handled filed change " + changes[i].Field);
                     break;

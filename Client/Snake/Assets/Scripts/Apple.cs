@@ -32,7 +32,6 @@ public class Apple : MonoBehaviour
             }
         }
         
-        Debug.Log($"Apple moved from {transform.position} to {position}");
         transform.position = position;
         gameObject.SetActive(true);
     }
