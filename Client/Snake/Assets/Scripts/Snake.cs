@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Snake : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Snake : MonoBehaviour
     [SerializeField] private float _speed = 2f;
     [SerializeField] private List<MeshRenderer> _meshes;
     private Tail _tail;
+    [SerializeField] private Text _login;
     
     public void Init(int detailCount, float hue, bool isPlayer = false)
     {
@@ -44,6 +46,8 @@ public class Snake : MonoBehaviour
             mesh.material.color = newColor;
         }
     }
+
+    public void SetLogin(string login) => _login.text = login;
 
     private void Update() => Move();
 
